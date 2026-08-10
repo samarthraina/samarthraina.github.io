@@ -2,10 +2,22 @@ document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
+const primaryNav = document.querySelector(".site-nav .nav-links");
+
+if (primaryNav) {
+  const siteClock = document.createElement("span");
+  siteClock.className = "site-clock";
+  siteClock.title = "Local time in India, Indian Standard Time";
+  siteClock.setAttribute("aria-label", "Local time in India");
+  siteClock.innerHTML = '<span class="clock-zone">IST</span><span data-ist-clock>Loading</span>';
+  primaryNav.append(siteClock);
+}
+
 const istFormatter = new Intl.DateTimeFormat("en-IN", {
   timeZone: "Asia/Kolkata",
   hour: "numeric",
   minute: "2-digit",
+  second: "2-digit",
   hour12: true,
 });
 
@@ -17,7 +29,7 @@ const updateISTClock = () => {
 };
 
 updateISTClock();
-window.setInterval(updateISTClock, 30000);
+window.setInterval(updateISTClock, 1000);
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

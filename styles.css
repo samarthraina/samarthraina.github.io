@@ -178,10 +178,13 @@ section { padding: 78px 0; border-bottom: 1px solid var(--line); }
 .contact-grid h2 { margin-top: 16px; font-size: clamp(38px, 6vw, 58px); }
 .contact-grid p { max-width: 670px; margin-top: 18px; color: var(--soft); font-size: 16.5px; }
 .contact-links { border-top: 1px solid var(--line); }
-.contact-time { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--soft); font-size: 13.5px; }
-.contact-time [data-ist-clock] { color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .contact-links a { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--soft); font-size: 13.5px; }
 .contact-links a:hover { color: var(--accent); }
+
+.site-clock { display: inline-flex; align-items: center; gap: 7px; padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 10.5px; font-variant-numeric: tabular-nums; letter-spacing: .03em; white-space: nowrap; }
+.site-clock .clock-zone { color: var(--accent); font-weight: 600; }
+.writing-preview { max-width: 760px; margin-top: 18px; color: var(--soft); font-family: var(--serif); font-size: clamp(21px, 3vw, 27px); line-height: 1.5; }
+.writing-soon { margin-top: 24px; color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 
 .page-hero { padding: 90px 0 62px; border-bottom: 1px solid var(--line); }
 .page-hero h1 { max-width: 850px; margin-top: 18px; font-size: clamp(48px, 7vw, 72px); }
@@ -247,6 +250,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .site-nav .wrap { align-items: flex-start; padding-top: 13px; padding-bottom: 13px; }
   .nav-links { max-width: 330px; justify-content: flex-end; flex-wrap: wrap; gap: 4px 14px; }
   .nav-links a { padding: 2px 0; }
+  .site-clock { padding: 3px 7px; }
   .hero { padding: 64px 0 56px; }
   .hero-grid { grid-template-columns: 1fr; }
   .portrait-frame { grid-row: 1; width: min(220px, 68vw); }
