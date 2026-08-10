@@ -1,215 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Samarth Raina</title>
-<meta name="description" content="Samarth Raina — AI alignment and safety researcher working on mechanistic interpretability, internal alignment, deception and honesty, and multi-agent safety." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
-<style>
-  :root{
-    --bg:#fcfcfb; --ink:#16161a; --soft:#3a3a42; --muted:#76767f; --line:#e9e8e4;
-    --accent:#4b3fcf; --accent-soft:#efeefb;
-    --serif:'Newsreader',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
-    --maxw:920px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  ::selection{background:var(--accent-soft)}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;margin:0;line-height:1.2}
-
-  nav{position:sticky;top:0;z-index:40;background:rgba(252,252,251,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{font-family:var(--serif);font-size:19px}
-  .navlinks{display:flex;gap:30px;font-size:14px;color:var(--muted)}
-  .navlinks a{position:relative}
-  .navlinks a:hover{color:var(--ink)}
-  @media(max-width:640px){.navlinks{display:none}}
-
-  header.hero{padding:104px 0 64px;border-bottom:1px solid var(--line)}
-  .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
-  .hero h1{font-size:clamp(44px,8vw,80px)}
-  .hero .role{margin-top:18px;font-size:17px;color:var(--muted)}
-  .hero .role b{color:var(--soft);font-weight:500}
-  .statement{margin:34px 0 0;max-width:680px;font-family:var(--serif);font-size:clamp(21px,3vw,27px);line-height:1.45;color:var(--ink)}
-  .keys{margin-top:30px;font-size:14px;color:var(--muted);letter-spacing:.01em}
-  .keys span{white-space:nowrap}
-  .links{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px;font-size:14.5px;font-weight:500}
-  .links a{display:inline-flex;align-items:center;gap:8px;color:var(--soft);border-bottom:1px solid transparent;padding-bottom:2px;transition:.15s}
-  .links a:hover{color:var(--accent);border-color:var(--accent)}
-  .links svg{width:16px;height:16px}
-
-  section{padding:78px 0;border-bottom:1px solid var(--line)}
-  .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
-  .about p{font-size:18px;color:var(--soft);margin:0 0 20px;max-width:760px}
-  .about p:last-child{margin-bottom:0}
-  .about em{font-style:italic;color:var(--ink)}
-
-  .focus-grid{display:grid;gap:30px 44px;grid-template-columns:repeat(2,1fr);margin-top:8px}
-  @media(max-width:640px){.focus-grid{grid-template-columns:1fr}}
-  .fitem{padding-top:18px;border-top:1px solid var(--line)}
-  .fitem .n{font-size:13px;color:var(--accent);font-variant-numeric:tabular-nums;margin-bottom:8px}
-  .fitem h3{font-size:20px;margin-bottom:8px}
-  .fitem p{margin:0;font-size:15px;color:var(--muted)}
-
-  .work{margin-top:6px}
-  .proj{padding:30px 0;border-top:1px solid var(--line)}
-  .proj:first-child{border-top:none;padding-top:8px}
-  .proj h3{font-size:22px;line-height:1.3;margin-bottom:12px;max-width:760px}
-  .proj p{margin:0;color:var(--soft);font-size:16px;max-width:780px}
-  .proj .more{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--sans);font-size:14px;font-weight:500;color:var(--accent)}
-  .proj .more:hover{text-decoration:underline}
-
-  .contact p{font-size:18px;color:var(--soft);max-width:680px;margin:0 0 26px}
-  .iconrow{display:flex;gap:14px;margin-top:4px}
-  .iconrow a{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--soft);transition:.18s}
-  .iconrow a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
-  .iconrow svg{width:20px;height:20px}
-  footer{padding:34px 0;color:var(--muted);font-size:13.5px}
-  footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
-
-  .reveal{opacity:0;transform:translateY(16px);transition:.7s cubic-bezier(.2,.7,.2,1)}
-  .reveal.in{opacity:1;transform:none}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f8f5" />
+  <title>Samarth Raina | Technical AI Safety</title>
+  <meta name="description" content="Samarth Raina works on technical AI safety through mechanistic interpretability, LLM behavior, and multi-agent safety." />
+  <link rel="canonical" href="https://samarthraina.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samarthraina.github.io/" />
+  <meta property="og:title" content="Samarth Raina | Technical AI Safety" />
+  <meta property="og:description" content="Mechanistic interpretability, LLM behavior, and multi-agent safety." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<nav>
-  <div class="wrap">
-    <a class="brand" href="#top">Samarth Raina</a>
-    <div class="navlinks">
-      <a href="#about">About</a>
-      <a href="#focus">Focus</a>
-      <a href="#work">Research</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="wrap">
-    <div class="kicker">AI Alignment &amp; Safety Research</div>
-    <h1>Samarth Raina</h1>
-    <p class="role"><b>AI Alignment &amp; Safety Researcher</b> &nbsp;·&nbsp; AI Alignment Research Lead, BITS Pilani &nbsp;·&nbsp; India</p>
-    <p class="statement">I use mechanistic interpretability to understand what alignment actually changes inside a model, and to tell genuine alignment apart from behavior that only looks the part.</p>
-    <p class="keys"><span>Mechanistic Interpretability</span> &nbsp;·&nbsp; <span>Internal Alignment</span> &nbsp;·&nbsp; <span>Deception &amp; Honesty</span> &nbsp;·&nbsp; <span>Multi-Agent Safety</span></p>
-    <div class="links">
-      <a href="mailto:samarthraina02@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Email</a>
-      <a href="https://scholar.google.com/citations?hl=en&user=8PD7WwsAAAAJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Z"/><path d="M5 13.2V17c0 1.7 3.13 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8Z"/></svg> Google Scholar</a>
-      <a href="https://github.com/samarthraina" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg> GitHub</a>
-      <a href="https://www.linkedin.com/in/samarth-raina/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"/></svg> LinkedIn</a>
-    </div>
-  </div>
-</header>
-
-<section id="about" class="about">
-  <div class="wrap reveal">
-    <div class="eyebrow">About</div>
-    <p>An AI alignment and safety researcher who would rather look <em>inside</em> a model than take its behavior at face value. The work uses mechanistic interpretability, both established techniques and new diagnostics, to study what actually changes within a model as it acts honestly or slips into deceptive and unsafe behavior.</p>
-    <p>It sits where machine learning and deep learning meet the cognitive and behavioral sciences, because honesty, deception, and how values take hold are questions as old in humans as they are new in machines. The aim is to make a model's inner alignment legible and measurable, and to help build systems that are genuinely honest, helpful, and harmless, even as they begin to reason and collaborate, with one another and with us.</p>
-    <p>Currently leading the day-to-day research of a 10+ member AI alignment group at BITS Pilani, under Prof. Amitava Das and mentors from Google DeepMind, Google, and Amazon.</p>
-  </div>
-</section>
-
-<section id="focus">
-  <div class="wrap reveal">
-    <div class="eyebrow">Research Focus</div>
-    <div class="focus-grid">
-      <div class="fitem">
-        <div class="n">01</div>
-        <h3>Internal vs. behavioral alignment</h3>
-        <p>Mechanistic diagnostics that distinguish genuine internalization from alignment that is only surface behavior.</p>
-      </div>
-      <div class="fitem">
-        <div class="n">02</div>
-        <h3>Deception &amp; honesty</h3>
-        <p>What deception is, in humans and in AI, and how to build models that are honest by construction rather than by appearance.</p>
-      </div>
-      <div class="fitem">
-        <div class="n">03</div>
-        <h3>Representation geometry</h3>
-        <p>Reading the internal geometry and hidden-state trajectories that post-training quietly reshapes.</p>
-      </div>
-      <div class="fitem">
-        <div class="n">04</div>
-        <h3>Multi-agent &amp; social safety</h3>
-        <p>How strategic behaviors, such as self-preservation and power-seeking, can surface when models interact with one another and with us.</p>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="wrap">
+      <a class="brand" href="./" aria-current="page">Samarth Raina</a>
+      <div class="nav-links">
+        <a href="research/">Research</a>
+        <a href="writing/">Writing</a>
+        <a href="reading/">Reading</a>
+        <a href="thinking/">Thinking</a>
+        <a href="about/">About</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section id="work">
-  <div class="wrap reveal">
-    <div class="eyebrow">Research</div>
-    <p style="font-size:14px;color:var(--muted);margin:-6px 0 30px">Papers currently under review.</p>
-    <div class="work">
-
-      <article class="proj">
-        <h3>D-STEER: Preference Alignment Techniques Learn to Behave, Not to Believe</h3>
-        <p>Does preference alignment (DPO) genuinely change a model's internal representations, or mainly install a compact steering effect on its outputs? The evidence points to a recoverable, low-rank, late-layer mechanism, suggesting this form of alignment is often behavioral rather than deeply internalized.</p>
-        <a class="more" href="https://arxiv.org/abs/2512.11838" target="_blank" rel="noopener">Read the preprint &rarr;</a>
-      </article>
-
-      <article class="proj">
-        <h3>MENTIS: What Belief Changes Under Alignment? Measuring Multi-Scale Latent Torsion in Language Models</h3>
-        <p>A geometry-first framework for measuring how alignment reorganizes a model's internals. It shows alignment-induced change is selective rather than uniform and concentrated at particular depths, separating alignment-specific structure from the effects of generic fine-tuning.</p>
-        <a class="more" href="https://arxiv.org/abs/2606.01060" target="_blank" rel="noopener">Read the preprint &rarr;</a>
-      </article>
-
-      <article class="proj">
-        <h3>Silent Social Inference in Large Language Models</h3>
-        <p>Language models quietly absorb social context, implied identity, competitive stakes, and reputation, into their judgments while rarely acknowledging it. A large, controlled study characterizes the effect and locates where this integration happens inside the model, with direct implications for using models as evaluators.</p>
-      </article>
-
-      <article class="proj">
-        <h3>Refusal in the Trajectory: &theta;-Guided Safety Steering</h3>
-        <p>Using the per-layer geometry of a model's hidden-state trajectory, this work locates where safety behavior is represented, and shows that targeted steering at those layers can substantially strengthen or suppress refusal, evidence that the identified direction is genuinely causal.</p>
-      </article>
-
-      <article class="proj">
-        <h3>nDNA: The Semantic Helix of Large Language Models</h3>
-        <p>A coordinate-invariant characterization of a model's internal computation that reads operations such as fine-tuning, merging, distillation, and alignment as measurable geometric change, a fingerprint for monitoring a model's internal state.</p>
-      </article>
-
-      <article class="proj">
-        <h3>Subspace-Aware Quantisation: A Mechanistic Study of How Low-Bit Quantisation Distorts Internal Representations in Transformer Language Models</h3>
-        <p>A mechanistic account of how low-bit quantisation distorts a model's internal features, identifying which directions are most damaged and most important, and proposing a subspace-aware scheme that protects the ones that matter.</p>
-      </article>
-
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Technical AI Safety</div>
+        <h1>Samarth Raina</h1>
+        <p class="role">Mechanistic Interpretability &nbsp;·&nbsp; LLM Behavior &nbsp;·&nbsp; Multi-Agent Safety</p>
+        <p class="statement">My work focuses on making increasingly capable AI systems safer by understanding their behavior, the internal computations behind it, and the dynamics that arise when they interact.</p>
+        <p class="hero-context">The aim is to turn that understanding into better ways of aligning, intervening on, and overseeing these systems.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="research/">View research</a>
+        </div>
+      </div>
+      <div class="portrait-frame" aria-label="Reserved space for Samarth Raina's portrait">
+        <img src="assets/profile.jpg" alt="Samarth Raina" onerror="this.hidden=true" />
+        <div class="portrait-fallback" aria-hidden="true"><span>SR</span><small>Portrait space</small></div>
+      </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="contact" class="contact">
-  <div class="wrap reveal">
-    <div class="eyebrow">Contact</div>
-    <p>Always glad to connect with researchers, collaborators, and anyone working to make AI go well.</p>
-    <div class="iconrow">
-      <a href="mailto:samarthraina02@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-      <a href="https://scholar.google.com/citations?hl=en&user=8PD7WwsAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Z"/><path d="M5 13.2V17c0 1.7 3.13 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8Z"/></svg></a>
-      <a href="https://github.com/samarthraina" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
-      <a href="https://www.linkedin.com/in/samarth-raina/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"/></svg></a>
-    </div>
-  </div>
-</section>
+  <main>
+    <section id="starting-point">
+      <div class="wrap reveal">
+        <div class="section-head">
+          <div class="eyebrow">Where the work begins</div>
+          <div>
+            <h2>What does it take for an AI system to remain safe as it becomes more capable?</h2>
+            <p class="section-intro">My route into this question starts with what a model does, moves toward what is happening internally, and then expands to what changes when several models interact.</p>
+          </div>
+        </div>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="yr"></span> Samarth Raina</span>
-    <span>AI alignment &amp; safety</span>
-  </div>
-</footer>
+        <div class="story">
+          <article class="story-step"><div class="story-label">Behavior</div><div><h3>Start with what the system actually does</h3><p>Alignment first appears through behavior: whether a model follows the intended objective, remains reliable under changing context, and avoids unsafe or deceptive actions.</p></div></article>
+          <article class="story-step"><div class="story-label">Mechanism</div><div><h3>Then ask what produced that behavior</h3><p>Outputs can reveal that something changed, but not why. Mechanistic interpretability lets us connect observable behavior to internal representations and computation, then test those explanations through intervention.</p></div></article>
+          <article class="story-step"><div class="story-label">Interaction</div><div><h3>Expand from individual models to interacting systems</h3><p>As AI systems begin coordinating, competing, and influencing one another, safety may depend on more than the alignment of each model in isolation. The interaction itself becomes part of the alignment problem.</p></div></article>
+          <article class="story-step"><div class="story-label">Intervention</div><div><h3>Use understanding to improve safety</h3><p>The longer-term goal is not only to identify unsafe dynamics, but to develop interventions and oversight methods grounded in evidence about how the systems actually work.</p></div></article>
+        </div>
+      </div>
+    </section>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
+    <section id="focus">
+      <div class="wrap reveal">
+        <div class="section-head"><div class="eyebrow">Research focus</div><div><h2>Four connected parts of the work</h2></div></div>
+        <div class="focus-grid">
+          <article class="focus-item"><div class="number">01</div><h3>Model behavior</h3><p>How context, training, and interaction shape what language models do and report.</p></article>
+          <article class="focus-item"><div class="number">02</div><h3>Mechanistic interpretability</h3><p>How observable behavior relates to representations and computation inside a model.</p></article>
+          <article class="focus-item"><div class="number">03</div><h3>Multi-agent safety</h3><p>How coordination, competition, influence, and social dynamics change safety at the system level.</p></article>
+          <article class="focus-item"><div class="number">04</div><h3>Interventions and oversight</h3><p>How mechanistic evidence can support more reliable safeguards and supervision.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="selected-research">
+      <div class="wrap reveal">
+        <div class="section-head">
+          <div class="eyebrow">Selected research</div>
+          <div><h2>Questions explored through current projects</h2><p class="section-intro">The projects below approach AI safety from different levels: behavior, internal computation, and interaction between agents.</p></div>
+        </div>
+        <div class="project-grid">
+          <article class="project-card"><div class="project-number">01</div><h3>Silent Influence</h3><p>How minimal inter-agent context shapes LLM behavior, including effects that remain absent from the model's stated explanation.</p><div class="project-meta">Behavioral evaluation · Internal analysis · Causal intervention</div><a class="project-link" href="research/silent-influence/">Explore the project →</a></article>
+          <article class="project-card"><div class="project-number">02</div><h3>D-STEER</h3><p>Whether a compact activation direction can reproduce and reverse behavioral changes introduced by Direct Preference Optimization.</p><div class="project-meta">Preference alignment · Activation steering · Cross-model evaluation</div><a class="project-link" href="research/d-steer/">Explore the project →</a></article>
+          <article class="project-card"><div class="project-number">03</div><h3>SafeTrace</h3><p>How safety-relevant representations propagate across transformer layers and where aligned and unaligned processing diverges.</p><div class="project-meta">Trajectory analysis · Representation dynamics · Steering</div><a class="project-link" href="research/safetrace/">Explore the project →</a></article>
+          <article class="project-card"><div class="project-number">04</div><h3>Emergent Dominance</h3><p>How incentive structures shape collaboration, influence, attribution, and information propagation among AI agents.</p><div class="project-meta">Multi-agent systems · Social behavior · Experimental design</div><a class="project-link" href="research/emergent-dominance/">Explore the project →</a></article>
+        </div>
+        <div class="hero-actions"><a class="button" href="research/">Browse all research</a></div>
+      </div>
+    </section>
+
+    <section id="ideas">
+      <div class="wrap reveal">
+        <div class="section-head"><div class="eyebrow">Beyond project pages</div><div><h2>Writing, reading, and thinking in public</h2><p class="section-intro">Separate spaces for more polished writing, brief notes on what I am reading, and questions that are still taking shape.</p></div></div>
+        <div class="preview-grid three">
+          <article class="preview-card"><div class="eyebrow">Writing</div><h3>Research notes and essays</h3><p>Technical explanations, reflections on AI safety, and lessons from the research process.</p><a href="writing/">Visit Writing →</a></article>
+          <article class="preview-card"><div class="eyebrow">Reading</div><h3>Papers shaping the work</h3><p>An evolving record of papers and articles, with concise notes on what felt useful or unresolved.</p><a href="reading/">Visit Reading Notes →</a></article>
+          <article class="preview-card"><div class="eyebrow">Thinking</div><h3>Questions still unfolding</h3><p>A less formal space for open questions, early connections, and ideas that do not yet belong to a project.</p><a href="thinking/">Visit Thinking Space →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <div class="wrap reveal">
+        <div class="section-head">
+          <div class="eyebrow">Background</div>
+          <div><h2>An interdisciplinary route into AI safety</h2><p class="section-intro">The current work draws on production deep-learning systems, research in neuroscience, and sustained interests in behavioral science, behavioral economics, decision making, and social behavior.</p></div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item"><div class="timeline-date">Aug 2025 — Present</div><div><h3>Research Assistant, AI Safety and Alignment</h3><div class="timeline-place">Faculty-mentored research collaboration</div><p>Research across LLM behavior, mechanistic interpretability, and multi-agent safety under the guidance of Prof. Amitava Das, with additional research mentorship.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Jul 2026 — Present</div><div><h3>AI Safety Research Collaborator</h3><div class="timeline-place">Indian AI Research Organization</div><p>Working on NeuroGraphFlow, a neuro-symbolic approach combining scene-graph reasoning with flow matching for safer autoregressive image generation.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">Jun 2024 — Jul 2025</div><div><h3>AI/ML Engineer, Core Research Team</h3><div class="timeline-place">Thrifty AI</div><p>Built production systems spanning LLMs, speech, retrieval, agentic pipelines, and real-time generative models.</p></div></article>
+          <article class="timeline-item"><div class="timeline-date">2020 — 2024</div><div><h3>B.Tech. in Computer Science and Social Sciences</h3><div class="timeline-place">IIIT-Delhi</div><p>Studied machine learning alongside behavioral economics, neuroscience of decision making, social science, and ethics in AI.</p></div></article>
+        </div>
+        <div class="hero-actions"><a class="button" href="about/">More about my path</a></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap reveal contact-grid">
+        <div><div class="eyebrow">Contact</div><h2>Curious about similar questions?</h2><p>If you would like to know more about any of these research directions, see an overlap with your own work, or bring a perspective from another field, feel free to reach out. I would genuinely love to exchange ideas, learn from different perspectives, and think together about how we can make meaningful progress on these questions.</p></div>
+        <div class="contact-links">
+          <a href="mailto:samarthraina02@gmail.com"><span>Email</span><span>↗</span></a>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=8PD7WwsAAAAJ" target="_blank" rel="noopener"><span>Google Scholar</span><span>↗</span></a>
+          <a href="https://github.com/samarthraina" target="_blank" rel="noopener"><span>GitHub</span><span>↗</span></a>
+          <a href="https://www.linkedin.com/in/samarth-raina/" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>© <span data-year></span> Samarth Raina</span><span>Technical AI Safety</span></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#f8f8f5" />
+  <title>Silent Influence | Samarth Raina</title>
+  <meta name="description" content="Silent Influence studies how minimal inter-agent context shapes LLM behavior and internal computation." />
+  <link rel="canonical" href="https://samarthraina.github.io/research/silent-influence/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" /><link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation"><div class="wrap"><a class="brand" href="../../">Samarth Raina</a><div class="nav-links"><a href="../" aria-current="location">Research</a><a href="../../writing/">Writing</a><a href="../../reading/">Reading</a><a href="../../thinking/">Thinking</a><a href="../../about/">About</a><a href="../../#contact">Contact</a></div></div></nav>
+  <header class="page-hero"><div class="wrap"><div class="kicker">Research project</div><h1>Silent Influence: How Minimal Inter-Agent Context Shapes LLM Behavior</h1><p>Can a small amount of information from an earlier agent interaction causally change how an LLM behaves toward another agent—even when that influence is absent from the model's own explanation?</p></div></header>
+  <main><section><div class="wrap project-layout reveal">
+    <aside class="project-sidebar"><dl><div><dt>Timeline</dt><dd>Mar 2026–Present</dd></div><div><dt>Role</dt><dd>Lead author and project lead</dd></div><div><dt>Methods</dt><dd>Paired interventions, explanation analysis, internal readouts, causal tracing, ablation, and steering</dd></div><div><dt>Collaborators</dt><dd>Vidhi Bhutani, Atharva Singh Rathore, Aman Chadha, Vinija Jain, and Amitava Das</dd></div></dl></aside>
+    <article class="project-content">
+      <section><h2>Research question</h2><p>The project asks whether minimal context from a previous interaction can silently influence a model's later judgment. The central intervention holds the task, response, rubric, and model fixed while varying only the earlier agent's reported score.</p></section>
+      <div class="result-callout"><strong>Central test</strong><p>The study tests whether unfavorable prior-score context can shift observable judgments without being acknowledged in a model's explanation, and whether internal analysis can identify the computation associated with that shift.</p></div>
+      <section><h2>Approach</h2><ul><li>Large-scale, prompt-level paired behavioral interventions.</li><li>Analysis of whether explanations acknowledge the manipulated context.</li><li>Layerwise internal readouts and causal localization.</li><li>Representation ablation and steering to test whether identified directions contribute causally.</li></ul></section>
+      <section><h2>Why it matters</h2><p>AI systems increasingly evaluate, supervise, and communicate with other models. If small pieces of inter-agent context can alter judgment without appearing in the model's explanation, output-only monitoring may miss an important source of bias and instability.</p></section>
+      <section><h2>My contribution</h2><p>I led the reanalysis of the original behavioral study, identified prior-score context as the strongest phenomenon, reframed the research around minimal inter-agent context and silent influence, designed the expanded behavioral and mechanistic experiments, and coordinate the experimental and manuscript work.</p></section>
+    </article>
+  </div></section></main>
+  <footer><div class="wrap"><span>© <span data-year></span> Samarth Raina</span><a href="../">Back to research</a></div></footer><script src="../../script.js"></script>
+</body></html>

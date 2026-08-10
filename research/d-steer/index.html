@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#f8f8f5" />
+  <title>D-STEER | Samarth Raina</title><meta name="description" content="D-STEER studies whether a single activation direction can reproduce and reverse DPO-induced behavior." /><link rel="canonical" href="https://samarthraina.github.io/research/d-steer/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" /><link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation"><div class="wrap"><a class="brand" href="../../">Samarth Raina</a><div class="nav-links"><a href="../" aria-current="location">Research</a><a href="../../writing/">Writing</a><a href="../../reading/">Reading</a><a href="../../thinking/">Thinking</a><a href="../../about/">About</a><a href="../../#contact">Contact</a></div></div></nav>
+  <header class="page-hero"><div class="wrap"><div class="kicker">Research project</div><h1>D-STEER: A Single Activation Direction Can Reproduce and Reverse DPO-Induced Behavior</h1><p>What does preference alignment change inside a model, and how much of the resulting behavior can be recreated through a compact inference-time intervention?</p></div></header>
+  <main><section><div class="wrap project-layout reveal">
+    <aside class="project-sidebar"><dl><div><dt>Timeline</dt><dd>Sep 2025–Feb 2026; Jul 2026–Present</dd></div><div><dt>Role</dt><dd>Lead author</dd></div><div><dt>Methods</dt><dd>Residual-stream analysis, activation steering, cross-model transfer, alignment and de-alignment evaluation</dd></div><div><dt>Collaborators</dt><dd>Saksham Aggarwal, Aman Chadha, Vinija Jain, and Amitava Das</dd></div></dl></aside>
+    <article class="project-content">
+      <section><h2>Research question</h2><p>D-STEER asks whether behavioral changes introduced by Direct Preference Optimization can be represented by a compact activation direction, then reproduced or reversed without changing the model's weights.</p></section>
+      <div class="result-callout"><strong>Central test</strong><p>Activation directions are applied positively and negatively across paired models to test whether DPO-associated behavior can be reproduced or reversed without confusing targeted behavioral change with general output degradation.</p></div>
+      <section><h2>Approach</h2><ul><li>Compare paired instruction-tuned and preference-aligned checkpoints.</li><li>Extract alignment-associated activation directions from the residual stream.</li><li>Intervene positively and negatively at inference time.</li><li>Evaluate transfer across model pairs and separate behavioral movement from quality loss.</li></ul></section>
+      <section><h2>Why it matters</h2><p>If a compact activation intervention can reproduce and reverse a substantial part of DPO-induced behavior, that constrains what preference training may be changing and motivates stronger tests of alignment robustness beyond surface outputs.</p></section>
+      <section><h2>My contribution</h2><p>I led the experimental design, implementation, analysis, evaluation controls, and manuscript development for the revised project.</p></section>
+    </article>
+  </div></section></main>
+  <footer><div class="wrap"><span>© <span data-year></span> Samarth Raina</span><a href="../">Back to research</a></div></footer><script src="../../script.js"></script>
+</body></html>

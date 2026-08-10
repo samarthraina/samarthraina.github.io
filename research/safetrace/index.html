@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#f8f8f5" />
+  <title>SafeTrace | Samarth Raina</title><meta name="description" content="SafeTrace tracks safety-relevant representations across transformer layers." /><link rel="canonical" href="https://samarthraina.github.io/research/safetrace/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" /><link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation"><div class="wrap"><a class="brand" href="../../">Samarth Raina</a><div class="nav-links"><a href="../" aria-current="location">Research</a><a href="../../writing/">Writing</a><a href="../../reading/">Reading</a><a href="../../thinking/">Thinking</a><a href="../../about/">About</a><a href="../../#contact">Contact</a></div></div></nav>
+  <header class="page-hero"><div class="wrap"><div class="kicker">Research project</div><h1>SafeTrace: Tracking Safety-Relevant Representations Across Transformer Layers</h1><p>How do safe and unsafe prompts propagate through an aligned model, where do their trajectories diverge, and can those differences support causal intervention?</p></div></header>
+  <main><section><div class="wrap project-layout reveal">
+    <aside class="project-sidebar"><dl><div><dt>Timeline</dt><dd>Mar–Jul 2026</dd></div><div><dt>Role</dt><dd>Lead author</dd></div><div><dt>Methods</dt><dd>Layerwise trajectory geometry, controlled model comparisons, activation patching, and steering</dd></div><div><dt>Collaborators</dt><dd>Amit Dhanda, Vinija Jain, and Aman Chadha</dd></div></dl></aside>
+    <article class="project-content">
+      <section><h2>Research question</h2><p>SafeTrace studies the layer-by-layer propagation of safety-relevant representations in aligned and less-aligned models. The goal is to localize where the processing trajectories separate, then test whether the identified directions contribute to behavior.</p></section>
+      <div class="result-callout"><strong>Central test</strong><p>The project localizes layerwise divergence between safe and unsafe processing, then uses targeted positive and negative steering to test whether the identified directions causally influence refusal behavior.</p></div>
+      <section><h2>Approach</h2><ul><li>Measure layerwise trajectory differences for safe and unsafe prompts.</li><li>Compare instruction-tuned and preference-aligned checkpoints with content-matched controls.</li><li>Localize the strongest directional divergence.</li><li>Use positive and negative steering to test causal directionality.</li></ul></section>
+      <section><h2>Why it matters</h2><p>Behavioral refusal rates reveal what a model does, but not how safety-relevant processing unfolds across depth. A trajectory-level view can expose where intervention is most effective and where apparent safety remains fragile.</p></section>
+      <section><h2>My contribution</h2><p>I led the trajectory analysis, controlled comparisons, mechanistic localization, steering experiments, interpretation, and manuscript development.</p></section>
+    </article>
+  </div></section></main>
+  <footer><div class="wrap"><span>© <span data-year></span> Samarth Raina</span><a href="../">Back to research</a></div></footer><script src="../../script.js"></script>
+</body></html>

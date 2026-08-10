@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f8f5" />
+  <title>Research | Samarth Raina</title>
+  <meta name="description" content="Research by Samarth Raina on mechanistic interpretability, LLM behavior, alignment, and multi-agent safety." />
+  <link rel="canonical" href="https://samarthraina.github.io/research/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation"><div class="wrap"><a class="brand" href="../">Samarth Raina</a><div class="nav-links"><a href="./" aria-current="page">Research</a><a href="../writing/">Writing</a><a href="../reading/">Reading</a><a href="../thinking/">Thinking</a><a href="../about/">About</a><a href="../#contact">Contact</a></div></div></nav>
+
+  <header class="page-hero"><div class="wrap"><div class="kicker">Research</div><h1>Understanding behavior, locating mechanisms, and improving safety</h1><p>The work connects controlled studies of what models do with analysis of the internal computations involved, then asks how those insights change when models interact as part of a larger system.</p></div></header>
+
+  <main>
+    <section>
+      <div class="wrap reveal">
+        <div class="section-head"><div class="eyebrow">Current direction</div><div><h2>What I am working on now</h2><p class="section-intro">The current research extends from individual-model behavior toward the social and system-level dynamics of interacting agents, while retaining a mechanistic lens.</p></div></div>
+        <div class="now-grid">
+          <article class="note-card"><span>01</span><h3>Silent influence</h3><p>When minimal context from one agent changes another model's behavior without appearing in its stated explanation.</p></article>
+          <article class="note-card"><span>02</span><h3>Alignment mechanisms</h3><p>How preference alignment and safety-relevant behavior appear in activation space and across transformer depth.</p></article>
+          <article class="note-card"><span>03</span><h3>Interacting agents</h3><p>How to study influence, attribution, coordination, and dominance in collaborative AI systems.</p></article>
+          <article class="note-card"><span>04</span><h3>Mechanistic safeguards</h3><p>How internal evidence can inform interventions and oversight rather than stopping at behavioral detection.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap reveal">
+        <div class="section-head"><div class="eyebrow">Core projects</div><div><h2>The main research arc</h2><p class="section-intro">Each project page explains the question, approach, motivation, and my contribution without presenting ongoing work as a settled conclusion.</p></div></div>
+        <div class="project-grid">
+          <article class="project-card"><div class="project-number">01</div><h3>Silent Influence</h3><p>Tests whether minimal context from a prior agent interaction changes an LLM's behavior, and whether the influence remains absent from its stated explanation.</p><div class="project-meta">Inter-agent context · Model behavior · Mechanistic analysis</div><a class="project-link" href="silent-influence/">Project details →</a></article>
+          <article class="project-card"><div class="project-number">02</div><h3>D-STEER</h3><p>Tests whether an activation direction derived from DPO-aligned models can reproduce and reverse alignment-related behavior at inference time.</p><div class="project-meta">Preference alignment · Activation steering · Transfer</div><a class="project-link" href="d-steer/">Project details →</a></article>
+          <article class="project-card"><div class="project-number">03</div><h3>SafeTrace</h3><p>Studies the layerwise propagation of safety-relevant representations across aligned and unaligned models and tests the resulting directions causally.</p><div class="project-meta">Trajectory geometry · Safety representations · Intervention</div><a class="project-link" href="safetrace/">Project details →</a></article>
+          <article class="project-card"><div class="project-number">04</div><h3>Emergent Dominance</h3><p>Uses a controlled collaborative-writing environment to study how incentive structures shape influence, attribution, and information propagation among AI agents.</p><div class="project-meta">Multi-agent systems · Incentives · Social behavior</div><a class="project-link" href="emergent-dominance/">Project details →</a></article>
+        </div>
+
+        <h2 class="list-title">Additional and collaborative research</h2>
+        <div class="research-list">
+          <article class="research-row"><h3>MENTIS</h3><p>Geometry-based diagnostics for measuring selective, depth-localized internal reorganization associated with preference alignment across model families.</p><span class="tag">Alignment geometry</span></article>
+          <article class="research-row"><h3>Belief Vector Fields and nDNA</h3><p>Layerwise diagnostic frameworks for examining how preference alignment and other model transformations reorganize internal computation.</p><span class="tag">Mechanistic diagnostics</span></article>
+          <article class="research-row"><h3>SubspaceGuard</h3><p>A mechanistic study of which internal features low-bit quantisation damages and how causally important subspaces might be protected.</p><span class="tag">Quantisation safety</span></article>
+          <article class="research-row"><h3>NeuroGraphFlow</h3><p>A neuro-symbolic approach combining scene-graph reasoning with flow matching for safer autoregressive image generation.</p><span class="tag">Neuro-symbolic safety</span></article>
+          <article class="research-row"><h3>Latent Collaboration</h3><p>A direction studying internal coordination and shared representations in interacting language-model agents.</p><span class="tag">Multi-agent mechanisms</span></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>© <span data-year></span> Samarth Raina</span><span><a href="../#contact">Contact</a></span></div></footer><script src="../script.js"></script>
+</body>
+</html>
