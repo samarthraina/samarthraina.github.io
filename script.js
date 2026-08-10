@@ -2,6 +2,23 @@ document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
+const istFormatter = new Intl.DateTimeFormat("en-IN", {
+  timeZone: "Asia/Kolkata",
+  hour: "numeric",
+  minute: "2-digit",
+  hour12: true,
+});
+
+const updateISTClock = () => {
+  const localTime = `${istFormatter.format(new Date())} IST`;
+  document.querySelectorAll("[data-ist-clock]").forEach((el) => {
+    el.textContent = localTime;
+  });
+};
+
+updateISTClock();
+window.setInterval(updateISTClock, 30000);
+
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (reducedMotion) {

@@ -178,6 +178,8 @@ section { padding: 78px 0; border-bottom: 1px solid var(--line); }
 .contact-grid h2 { margin-top: 16px; font-size: clamp(38px, 6vw, 58px); }
 .contact-grid p { max-width: 670px; margin-top: 18px; color: var(--soft); font-size: 16.5px; }
 .contact-links { border-top: 1px solid var(--line); }
+.contact-time { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--soft); font-size: 13.5px; }
+.contact-time [data-ist-clock] { color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .contact-links a { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--soft); font-size: 13.5px; }
 .contact-links a:hover { color: var(--accent); }
 
